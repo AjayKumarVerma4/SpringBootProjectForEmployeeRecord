@@ -1,0 +1,86 @@
+// Create a new Employee
+
+request type =>   POST   
+url =>             localhost:8080/employee/create
+input =>
+{
+    "firstName": "Ajay",
+    "lastName": "Verma",
+    "email":"ajay@gmail.com",
+    "age": 24,
+    "gender":"Male",
+    "address":"Bengaluru Karnataka India"
+}
+
+
+// Update a existing Empolyee(all attributes).
+
+request type =>   PUT   
+url =>            localhost:8080/employee/update
+input =>
+
+{
+    "id":1,
+    "firstName": "Vijay",
+    "lastName": "Singh",
+    "email":"vijay12@gmail.com",
+    "age": 25,
+    "gender":"Male",
+    "address":"Bengaluru, Karnataka, India"
+}
+
+// Get all Employees
+
+request type =>   GET  
+url =>            localhost:8080/employee/list
+output =>
+
+[
+    {
+        "id": 1,
+        "firstName": "Ajay",
+        "lastName": "Verma",
+        "email": "ajay@gmail.com",
+        "age": 24,
+        "gender": "Male",
+        "address": "Bengaluru Karnataka India"
+    },
+    {
+        "id": 2,
+        "firstName": "Vijay",
+        "lastName": "Singh",
+        "email": "vijay12@gmail.com",
+        "age": 25,
+        "gender": "Male",
+        "address": "Bengaluru, Karnataka, India"
+    }
+]
+
+// Get Employee by id
+
+request type =>   GET  
+url =>            localhost:8080/employee/id?id=1
+output =>
+
+{
+    "id": 1,
+    "firstName": "Ajay",
+    "lastName": "Verma",
+    "email": "ajay@gmail.com",
+    "age": 24,
+    "gender": "Male",
+    "address": "Bengaluru Karnataka India"
+}
+
+
+// Delete an employee.(prefered soft delete)
+
+request type =>   DELETE  
+url =>            localhost:8080/employee/delete?id=2
+output =>         true
+
+
+
+
+
+
